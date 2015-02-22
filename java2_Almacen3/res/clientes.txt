@@ -1,0 +1,4 @@
+Iker,Onatibia,44170266p#Astigarraga,Arrobitxulo,11,4,C,20115#101,35
+Pepe,Garcia,34098200x#Donostia,Av_navarra,1,3,A,20100#102,15
+Ainara,Castillo,44582144l#Oiartzun,Nagusia,34,2,B,20180#103,10
+Jon,Zabalza,64581422h#Hernani,Kardaberaz,4,1,A,20130#104,5

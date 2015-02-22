@@ -1,0 +1,4 @@
+uno,A34120010#Astigarraga,Arrobitxulo,11,4,C,20115#Pepe,Garcia,pepegarcia@gmail.com,943555555
+dos,B20089298#Oiartzun,Mayor,1,1,A,20180#Ainara,Plazaola,aplazaola@gmail.com,663456654
+tres,A30023982#Donostia,Av.Zarautz,5,2,B,20100#Rodrigo,DeLaFuente,rfuente@gmail.com,665789987
+cuatro,B90043543#Barakaldo,calle,2,5,F,20183#Ane,Gartziategi,agartziategi@gmail.com,943333373
