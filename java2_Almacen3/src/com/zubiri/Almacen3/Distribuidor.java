@@ -22,6 +22,7 @@ public class Distribuidor {
 			contador();
 		}catch(Exception e){
 			System.err.println("No se ha podido crear el Distribuidor");
+			System.err.println("Error: " + e);
 		}
 	}
 	

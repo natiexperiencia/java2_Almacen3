@@ -16,6 +16,7 @@ public class Leche extends Producto {
 			this.setTipo(sc.next());
 		}catch(Exception e){
 			System.err.println("No se ha podido crear la leche");
+			System.err.println("Error: " + e);
 		}
 	}
 	

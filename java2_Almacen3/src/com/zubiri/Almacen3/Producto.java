@@ -27,6 +27,7 @@ public abstract class Producto {
 			this.setDistribuidor(Distribuidores.buscarDistribuidor(sc.next()));
 		}catch(Exception e){
 			System.err.println("No se ha podido crear el producto");
+			System.err.println("Error: " + e);
 		}
 	}
 	

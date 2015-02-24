@@ -20,6 +20,7 @@ public class Lechuga extends Producto {
 			this.setColor(sc.next());
 		}catch(Exception i){
 			System.err.println("No se ha podido crear la lechuga");
+			System.err.println("Error: " + i);
 		}
 	}
 	

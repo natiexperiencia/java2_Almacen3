@@ -20,6 +20,7 @@ public class Direccion {
 			this.setCodPostal(Integer.parseInt(datos[5]));
 		}catch(Exception i){
 			System.err.println("No se ha podido crear la dirección");
+			System.err.println("Error: " + i);
 		}
 	}
 	

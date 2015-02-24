@@ -11,10 +11,9 @@ public class Cesta {
 	public void pintarCuenta(Scanner sc){
 		System.out.println("Número de cliente: ");
 		numeroCli = sc.nextInt();
-		
-		try{
-			cliente = Clientes.buscarCliente(numeroCli);
-		}catch(Exception e){
+
+		cliente = Clientes.buscarCliente(numeroCli);
+		if(cliente == null){
 			System.err.println("No se ha encontrado el cliente");
 		}
 		if (Productos.getProductos().size() == 0) {

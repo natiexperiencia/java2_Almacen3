@@ -11,6 +11,7 @@ public class Contacto extends Persona {
 			this.setTelefono(Integer.parseInt(datos[3]));
 		}catch(Exception e){
 			System.err.println("No se ha podido crear el contacto");
+			System.err.println("Error: " + e);
 		}
 	}
 	

@@ -20,6 +20,7 @@ public class Manzana extends Producto {
 			this.setColor(sc.next());
 		}catch(Exception e){
 			System.err.println("No se ha podido crear la manzana");
+			System.err.println("Error: " + e);
 		}
 	}
 	

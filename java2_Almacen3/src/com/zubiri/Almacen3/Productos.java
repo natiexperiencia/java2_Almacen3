@@ -41,6 +41,7 @@ public class Productos {
 			}
 		}catch(Exception i){
 			System.err.println("Algo no ha ido bien");
+			System.err.println("Error: " +i);
 		}
 	}
 	
