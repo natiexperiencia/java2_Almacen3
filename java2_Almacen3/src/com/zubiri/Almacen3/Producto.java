@@ -16,14 +16,18 @@ public abstract class Producto {
 	}
 	
 	public Producto(Scanner sc){
-		System.out.println("Código de barras del producto: ");
-		this.setCod_barras(sc.nextInt());
-		System.out.println("Precio del producto: ");
-		this.setPrecio(sc.nextDouble());
-		System.out.println("Procedencia del producto: ");
-		this.setProcedencia(sc.next());
-		System.out.println("Distribuidor del producto: ");
-		this.setDistribuidor(Distribuidores.buscarDistribuidor(sc.next()));
+		try{
+			System.out.println("Código de barras del producto: ");
+			this.setCod_barras(sc.nextInt());
+			System.out.println("Precio del producto: ");
+			this.setPrecio(sc.nextDouble());
+			System.out.println("Procedencia del producto: ");
+			this.setProcedencia(sc.next());
+			System.out.println("Distribuidor del producto: ");
+			this.setDistribuidor(Distribuidores.buscarDistribuidor(sc.next()));
+		}catch(Exception e){
+			System.err.println("No se ha podido crear el producto");
+		}
 	}
 	
 	public void pintarProducto(){

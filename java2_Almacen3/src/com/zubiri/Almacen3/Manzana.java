@@ -13,10 +13,14 @@ public class Manzana extends Producto {
 	
 	public Manzana(Scanner sc) {
 		super(sc);
-		System.out.println("Tipo de manzana: ");
-		this.setTipo(sc.next());
-		System.out.println("Color: ");
-		this.setColor(sc.next());
+		try{
+			System.out.println("Tipo de manzana: ");
+			this.setTipo(sc.next());
+			System.out.println("Color: ");
+			this.setColor(sc.next());
+		}catch(Exception e){
+			System.err.println("No se ha podido crear la manzana");
+		}
 	}
 	
 	@Override

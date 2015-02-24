@@ -12,15 +12,17 @@ public class Distribuidor {
 	public Distribuidor(){}
 	
 	public Distribuidor(String lineaDistribuidor, String separador){
-		
-		String[] datos = lineaDistribuidor.split(separador);
-		String[] datos2= datos[0].split(",");
-		this.setNombre(datos2[0]);
-		this.setCif(datos2[1]);
-		this.setDireccion(new Direccion(datos[1], ","));
-		this.setPersonaContacto(new Contacto(datos[2], ","));
-		contador();
-		
+		try{
+			String[] datos = lineaDistribuidor.split(separador);
+			String[] datos2= datos[0].split(",");
+			this.setNombre(datos2[0]);
+			this.setCif(datos2[1]);
+			this.setDireccion(new Direccion(datos[1], ","));
+			this.setPersonaContacto(new Contacto(datos[2], ","));
+			contador();
+		}catch(Exception e){
+			System.err.println("No se ha podido crear el Distribuidor");
+		}
 	}
 	
 	public String pintarDistribuidor(){

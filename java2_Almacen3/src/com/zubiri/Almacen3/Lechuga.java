@@ -13,10 +13,14 @@ public class Lechuga extends Producto {
 	
 	public Lechuga(Scanner sc){
 		super(sc);
-		System.out.println("Tipo de lechuga: ");
-		this.setTipo(sc.next());
-		System.out.println("Color de la lechuga: ");
-		this.setColor(sc.next());
+		try{
+			System.out.println("Tipo de lechuga: ");
+			this.setTipo(sc.next());
+			System.out.println("Color de la lechuga: ");
+			this.setColor(sc.next());
+		}catch(Exception i){
+			System.err.println("No se ha podido crear la lechuga");
+		}
 	}
 	
 	@Override

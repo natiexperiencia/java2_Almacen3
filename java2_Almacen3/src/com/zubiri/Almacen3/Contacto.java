@@ -3,22 +3,25 @@ package com.zubiri.Almacen3;
 public class Contacto extends Persona {
 	
 	public Contacto(String lineaContacto, String separador){
-		
-		String[] datos = lineaContacto.split(separador);
-		this.setNombre(datos[0]);
-		this.setApellido(datos[1]);
-		this.setEmail(datos[2]);
-		this.setTelefono(Integer.parseInt(datos[3]));
+		try{
+			String[] datos = lineaContacto.split(separador);
+			this.setNombre(datos[0]);
+			this.setApellido(datos[1]);
+			this.setEmail(datos[2]);
+			this.setTelefono(Integer.parseInt(datos[3]));
+		}catch(Exception e){
+			System.err.println("No se ha podido crear el contacto");
+		}
 	}
 	
 	public String pintarPersonaContacto(){
 		
 		String contacto =
 				"Contacto: " +
-				"\n\tNombre: " + this.getNombre() + 
-				"\n\tApellido: " + this.getApellido() + 
-				"\n\tEmail: " + this.getEmail() + 
-				"\n\tTeléfono: " + this.getTelefono() + "\n";
+				"\n\t\tNombre: " + this.getNombre() + 
+				"\n\t\tApellido: " + this.getApellido() + 
+				"\n\t\tEmail: " + this.getEmail() + 
+				"\n\t\tTeléfono: " + this.getTelefono() + "\n";
 		return contacto;
 	}
 }

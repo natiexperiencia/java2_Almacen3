@@ -11,8 +11,12 @@ public class Leche extends Producto {
 	
 	public Leche(Scanner sc){
 		super(sc);
-		System.out.println("Tipo de leche: ");
-		this.setTipo(sc.next());
+		try{
+			System.out.println("Tipo de leche: ");
+			this.setTipo(sc.next());
+		}catch(Exception e){
+			System.err.println("No se ha podido crear la leche");
+		}
 	}
 	
 	@Override

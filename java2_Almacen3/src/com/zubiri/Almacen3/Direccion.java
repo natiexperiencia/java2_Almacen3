@@ -8,15 +8,19 @@ public class Direccion {
 	public Direccion(){}
 	
 	public Direccion(String lineaDireccion, String separador){
+		try{
 		
-		String[] datos = lineaDireccion.split(separador);
-		this.setCiudad(datos[0]);
-		this.setCalle(datos[1]);
-		this.setNumero(Integer.parseInt(datos[2]));
-		this.setPiso(Integer.parseInt(datos[3]));
-		char[] letras = datos[4].toCharArray();
-		this.setLetra(letras[0]);
-		this.setCodPostal(Integer.parseInt(datos[5]));
+			String[] datos = lineaDireccion.split(separador);
+			this.setCiudad(datos[0]);
+			this.setCalle(datos[1]);
+			this.setNumero(Integer.parseInt(datos[2]));
+			this.setPiso(Integer.parseInt(datos[3]));
+			char[] letras = datos[4].toCharArray();
+			this.setLetra(letras[0]);
+			this.setCodPostal(Integer.parseInt(datos[5]));
+		}catch(Exception i){
+			System.err.println("No se ha podido crear la dirección");
+		}
 	}
 	
 	public String pintarDireccion(){
