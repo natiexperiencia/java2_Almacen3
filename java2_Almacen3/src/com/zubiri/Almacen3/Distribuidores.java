@@ -14,10 +14,10 @@ public class Distribuidores {
 	private Distribuidores(){}
 	
 	public static void leerDistribuidores(String fichero) throws IOException{
+		FileInputStream fis = new FileInputStream(fichero);
+	 	InputStreamReader isr = new InputStreamReader(fis, "UTF8");
+		BufferedReader br = new BufferedReader(isr);
 		try{
-			FileInputStream fis = new FileInputStream(fichero);
-		 	InputStreamReader isr = new InputStreamReader(fis, "UTF8");
-			BufferedReader br = new BufferedReader(isr);
 			String linea = br.readLine();
 			if (linea == null) {
 				System.err.println("El archivo está vacio");
@@ -28,9 +28,10 @@ public class Distribuidores {
 					linea = br.readLine();
 				}	
 			}
-			br.close();
 		}catch(FileNotFoundException fne){
 			System.err.println("El archivo de distribuidores no existe");
+		}finally{
+			br.close();
 		}
 	}
 	

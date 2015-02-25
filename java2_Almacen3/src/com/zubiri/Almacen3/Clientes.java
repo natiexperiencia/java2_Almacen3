@@ -14,10 +14,10 @@ public class Clientes {
 	private Clientes(){}
 	
 	public static void leerClientes(String fichero) throws IOException{
+		FileInputStream fis = new FileInputStream(fichero);
+	 	InputStreamReader isr = new InputStreamReader(fis, "UTF8");
+		BufferedReader br = new BufferedReader(isr);
 		try{
-			FileInputStream fis = new FileInputStream(fichero);
-		 	InputStreamReader isr = new InputStreamReader(fis, "UTF8");
-			BufferedReader br = new BufferedReader(isr);
 			String linea = br.readLine();
 			if (linea == null) {
 				System.err.println("El archivo está vacio");
@@ -32,9 +32,9 @@ public class Clientes {
 		}catch(FileNotFoundException fne){
 			System.err.println("El archivo de clientes no existe");
 		}
-		//finally{
-			//br.close();
-		//}
+		finally{
+			br.close();
+		}
 	}
 	
 	public static Cliente buscarCliente(int numeroCli) {
